@@ -1,6 +1,23 @@
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';   
+import React from 'react';
+import Cart from './Cart';
+import Database from './Database'
 
+
+function Produkter () {
+    return (
+        <div>
+            <h2>Dette er produktene vi har i vår butikk: </h2>
+            
+            
+            <Database />
+            <br />
+            <Cart/>
+        </div>
+    )
+    }
+export default Produkter;
+
+{ /*
 function Todo({item, index, leggBort, leggTil, addtoCart, cartitem}) {
     return (
         <div className="main">
@@ -14,49 +31,13 @@ function Todo({item, index, leggBort, leggTil, addtoCart, cartitem}) {
     )
 }
 
-function Produkter () {
-    const [item, changelist] = useState([
-        {
-            title: 'Kérastase Resistance Bain Force Architecte Shampoo 250ml',
-            isCompleted: false,
-            frequency: 1,
-            pris: 90, 
-            index: 1,
-            path: "shampoo"
-        },
-        {
-            title: 'Renati Straight Hold Glaze Strong Hold 100ml',
-            isCompleted: false,
-            frequency: 1,
-            pris: 79,
-            index: 2,
-            path: 'renati'
-        },
-        {
-            title: 'Kérastase Resistance Ciment Anti-Usure 200ml',
-            isCompleted: false,
-            frequency: 1,
-            pris: 49,
-            index: 3,
-            path: 'balsam'
-        }
-    ]); 
 
+
+    //const [item, changelist] = useState([
+        
+        
     const [cartitem, changecart] = useState([
-        {
-            title: 'hårføner',
-            isCompleted: false,
-            frequency: 1,
-            pris: 299,
-            index: 4
-        },
-        {
-            title: 'rettetang',
-            isCompleted: false,
-            frequency: 1,
-            pris:500,
-            index: 5
-        }
+        
     ]);
     const leggBort = index => {
         const newList = [...item];
@@ -67,8 +48,9 @@ function Produkter () {
     const addtoCart = index => {
         const newCart = [...item];
         cartitem.push(newCart[index])
-        console.log(cartitem);
-        changecart(cartitem)
+        changecart(cartitem);
+        console.log(cartitem.frequency);
+
         
        // changecart(cartitem[index].concat(item));         
     }
@@ -89,21 +71,22 @@ function Produkter () {
                         <th>Antall</th>
                     </tr>
                 </thead>
-
                 <tbody>
-                    {item.map((item, index) => (
+                   <Cart />
+                </tbody>
+                <tbody>
+                    {item.map((item, index, cartitem) => (
                         <tr>
                             <td>{item.title}</td>
                             <td><img src={`./images/${item.path}.jpg`} alt={item.path}/></td>
                             <td>{item.pris},-</td>
-                            <td><Todo index={index} 
-                            item={item} leggBort={leggBort} 
-                            leggTil={leggTil} addtoCart={addtoCart} /></td>
+                            <td><Todo index={index} item={item} leggBort={leggBort} leggTil={leggTil} 
+                             addtoCart={addtoCart} cartitem={cartitem} key={index} /></td>
+                            <td>{cartitem.title}</td>
                         </tr>
                     ))}
-                </tbody>
+                    </tbody>
             </table>
-        </div>
     )
 }
 
@@ -119,5 +102,5 @@ addtoCart={addtoCart}
 
 /> 
 ))}
-*/
-export default Produkter;
+</div>
+*/}

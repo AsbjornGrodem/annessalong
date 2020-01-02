@@ -1,47 +1,50 @@
-import React, {useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import Header from './Components/Header';
-import About from './Components/About';
+import Omoss from './Components/Omoss';
 import {   BrowserRouter as Router,   Switch,    Route,    Link  } from "react-router-dom";
 import Home from './Components/Home';
 import Dashboard from './Components/Dashboard'
 import Produkter from './Components/Produkter'
-import Test from './Components/Test'
+import { CartProvider } from './Components/CartContext'
 
 //https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_website2
+//https://stackblitz.com/edit/react-context-tutorial
 
 function App() {
   return (
-    <div>
-        <Header />
-          <div>
-            <Router>
+      <CartProvider>
+            <div>
+                <Header />
                 <div>
-                <Link to="/" type="button"  className="btn btn-light">Home</Link>
-                <Link to="/about" type="button"  className="btn btn-light">About</Link>
-                <Link to="/dashboard" type="button" className="btn btn-light">Dashboard</Link>
-                <Link to="/produkter" type="button" className="btn btn-light">Produkter</Link>
-               </div>
+                    <Router>
+                        <div className="navi">
+                        <Link to="/" type="button"  className="btn btn-light">Hjem</Link>
+                        <Link to="/omoss" type="button"  className="btn btn-light">Om oss</Link>
+                        <Link to="/dashboard" type="button" className="btn btn-light">Dashboard</Link>
+                        <Link to="/produkter" type="button" className="btn btn-light">Produkter</Link>
+                    </div>
 
-               <div>
-               <Switch>
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/dashboard">
-                        <Dashboard />
-                    </Route>
-                    <Route path="/produkter">
-                        <Produkter />
-                    </Route>
-                    </Switch>
+                    <div>
+                    <Switch>
+                            <Route exact path="/">
+                                <Home />
+                            </Route>
+                            <Route path="/omoss">
+                                <Omoss />
+                            </Route>
+                            <Route path="/dashboard">
+                                <Dashboard />
+                            </Route>
+                            <Route path="/produkter">
+                                <Produkter />
+                            </Route>
+                            </Switch>
+                        </div>
+                    </Router>
                 </div>
-            </Router>
-        </div>
-    </div>
+            </div>
+        </CartProvider>
   );
 }
 

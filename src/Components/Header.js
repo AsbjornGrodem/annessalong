@@ -6,7 +6,6 @@ function Header () {
         <div className="header">
                 <h1>Annes salong</h1>
                 <p>Dame og herrefrisør</p>
-
         </div>
         )
 }
