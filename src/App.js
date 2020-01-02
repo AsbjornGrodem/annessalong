@@ -18,10 +18,10 @@ function App() {
                 <Header />
                 <div>
                     <Router>
-                        <div className="navi">
+                        <div className="navit">
                         <Link to="/" type="button"  className="btn btn-light">Hjem</Link>
                         <Link to="/omoss" type="button"  className="btn btn-light">Om oss</Link>
-                        <Link to="/dashboard" type="button" className="btn btn-light">Dashboard</Link>
+                        <Link to="/dashboard" type="button" className="btn btn-light">Bestill time</Link>
                         <Link to="/produkter" type="button" className="btn btn-light">Produkter</Link>
                     </div>
 
