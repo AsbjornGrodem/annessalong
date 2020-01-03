@@ -22,6 +22,7 @@ const Database = () => {
     ] 
 
     return (
+        
         <div id="database">
             {
                 database.map(item => (

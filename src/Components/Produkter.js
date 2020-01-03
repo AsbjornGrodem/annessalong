@@ -17,8 +17,8 @@ function Produkter () {
     }
 export default Produkter;
 
-//As I was learning I found better ways to write the code, this was a previous version. 
-{ /*
+{/*As I was learning I found better ways to write the code, this was a previous version. 
+ 
 function Todo({item, index, leggBort, leggTil, addtoCart, cartitem}) {
     return (
         <div className="main">
@@ -34,7 +34,7 @@ function Todo({item, index, leggBort, leggTil, addtoCart, cartitem}) {
 
 
 
-    //const [item, changelist] = useState([
+    const [item, changelist] = useState([
         
         
     const [cartitem, changecart] = useState([

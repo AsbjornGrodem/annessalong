@@ -24,7 +24,6 @@ function App() {
                         <Link to="/dashboard" type="button" className="btn btn-light">Bestill time</Link>
                         <Link to="/produkter" type="button" className="btn btn-light">Produkter</Link>
                     </div>
-
                     <div>
                     <Switch>
                             <Route exact path="/">

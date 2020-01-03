@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 function Home() {
     return (
       <div>
@@ -14,6 +16,7 @@ function Home() {
         </div>
         
         <div className="main">
+          
           <h2>Juletilbud</h2>
           <h5>I romjulen har vi mange gode tilbud</h5>
         </div>

@@ -8,9 +8,10 @@ function Omoss() {
         <div>
           Vi er tre jenter som jobber i Annes salong. Salongen befinner seg i Fjell kommune på 
           Sotra, ca 20 minutter fra Bergen sentrum. 
-          <img id="googlemaps" src={maps}></img>
+          <img id="googlemaps" src={maps} alt=".."></img>
         </div>
       </div>
+      
     );
   }
   
