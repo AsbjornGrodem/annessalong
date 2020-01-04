@@ -8,8 +8,6 @@ import Dashboard from './Components/Dashboard'
 import Produkter from './Components/Produkter'
 import { CartProvider } from './Components/CartContext'
 
-//https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_website2
-//https://stackblitz.com/edit/react-context-tutorial
 
 function App() {
   return (
