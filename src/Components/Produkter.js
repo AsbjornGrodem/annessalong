@@ -17,7 +17,7 @@ function Produkter () {
     }
 export default Produkter;
 
-{/*As I was learning I found better ways to write the code, this was a previous version. 
+/*As I was learning I found better ways to write the code, this was a previous version. 
  
 function Todo({item, index, leggBort, leggTil, addtoCart, cartitem}) {
     return (
@@ -91,4 +91,4 @@ function Todo({item, index, leggBort, leggTil, addtoCart, cartitem}) {
     )
 }
 
-*/}
+*/
